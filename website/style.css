@@ -7,7 +7,7 @@ body{
     display: grid;
     grid-auto-rows: minmax(150px, auto);
     /* grid-template-columns:  */
-    height:100vh;
+    height:50vh;
     background: #f23557;
     color: #f0d43a;
     justify-content: center;
@@ -17,7 +17,7 @@ body{
 }
 
 .holder{
-
+background: black;
 }
 
 .entry{
@@ -32,7 +32,9 @@ body{
 
 }
 
-#temp{
+#temp{   font-family: 'Manrope', sans-serif;
+    font-size: 3.5em;
+    margin-top: -80px;
 
 }
 
