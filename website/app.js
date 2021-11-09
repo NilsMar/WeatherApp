@@ -36,6 +36,7 @@ fetch(baseURL)
 	feelings = feelingsIn.value
 	content.innerHTML = feelings
 	console.log(data)
+	// call Post Data function
 	 postData('/add', {
                 temperatureValue,
                 newDate,
