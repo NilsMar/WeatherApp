@@ -1,5 +1,5 @@
 // Setup empty JS object to act as endpoint for all routes
-projectData = {};
+let projectData = {};
 
 /* Express to run server and routes */
 const express = require('express');
@@ -10,6 +10,7 @@ const app = express();
 // Start up an instance of app
 /* Dependencies */
 const bodyParser = require('body-parser')
+
 /* Middleware*/
 //Here we are configuring express to use body-parser as middle-ware.
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -34,9 +35,18 @@ const server = app.listen(port, listening);
     // console.log(server);
     console.log(`running on localhost: ${port}`);
   };
-/*// GET route
-app.get('/all', sendData);
+// GET route
+app.get('/return', getData);
 
-function sendData (request, response) {
-  response.send(projectData);
-};*/
+function getData(request, response) {
+    response.send(projectData);
+}
+
+// POST route
+app.post('/add', postData);
+
+function postData(request, response) {
+    projectData = request.body;
+    response.send({ message: 'Post Data' });
+    console.log(projectData);
+}
