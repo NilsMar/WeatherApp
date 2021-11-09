@@ -44,7 +44,7 @@ fetch(baseURL)
                 sky
 
 })
-.catch(err => alert('something is off'))
+.catch(err =>  alert('something is off'))
 })
 }
 
